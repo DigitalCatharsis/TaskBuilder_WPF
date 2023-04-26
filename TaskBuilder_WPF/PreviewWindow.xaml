@@ -1,0 +1,16 @@
+﻿<Window x:Class="TaskBuilder_WPF.PreviewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskBuilder_WPF"
+        mc:Ignorable="d"
+        Title="PreviewWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas Grid.Row="0" Background="LightGreen" Margin="0,0,0,67">
+            <TextBlock>У меня тут куча описания и возможность скроллить</TextBlock>
+        </Canvas>
+        <Button Content="Accept" HorizontalAlignment="Left" Margin="178,400,0,0" VerticalAlignment="Top"/>
+        <Button Content="Restart" HorizontalAlignment="Left" Margin="530,400,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

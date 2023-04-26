@@ -1,0 +1,17 @@
+﻿<Window x:Class="TaskBuilder_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskBuilder_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Width="60" Height="30" Panel.ZIndex="3" Margin="10 10 0 0" Click="Button_Click_Selection">Selection</Button>
+        <Button Width="60" Height="30" Panel.ZIndex="2" Margin="45 45 0 0" Click="Button_Click_Preview">Preview</Button>
+        <Button Width="60" Height="30" Panel.ZIndex="1" Margin="75 75 0 0" Click="Button_Click_Start" IsDefault="True">Start</Button>        
+        <Button Width="60" Height="30" Panel.ZIndex="0" Margin="125 125 0 0" Click="Button_Click_Test">Test</Button>
+        <Button x:Name="escButton" Width="60" Height="30" Panel.ZIndex="0" Margin="693,47,47,357" Content="Выход" IsCancel="True" Click="Button_Click_EscButton"/>
+        <Button Width="60" Height="30" Panel.ZIndex="1" Margin="468,240,272,164" Click="Button_Click_Selection2" IsDefault="True" Content="Start2"/>
+    </Grid>
+</Window>
