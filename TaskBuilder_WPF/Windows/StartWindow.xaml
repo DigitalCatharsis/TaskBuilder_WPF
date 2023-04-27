@@ -23,7 +23,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Добрый день! Прошу выбрать имя файла для работы:" FontSize="25" FontWeight="Bold" Margin="40 15 30 20 " Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6"></TextBlock>
+        <TextBlock Text="Выберите файл для работы и его разделитель:" FontSize="25" FontWeight="Bold" Margin="40 15 30 20 " Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6"></TextBlock>
         <Button Grid.Column="0" Grid.Row="1" Content="Формальные"  Margin="10" Background="#BED1D0"/>
         <Button Grid.Column="1" Grid.Row="1" Content="Внутренние" Margin="10" Background="#BED1D0"/>
         <Button Grid.Column="2" Grid.Row="1" Content="Team3" Margin="10" Background="#BED1D0"/>
@@ -32,8 +32,18 @@
         <Button Grid.Column="5" Grid.Row="1" Content="Team6" Margin="10" Background="#BED1D0"/>
         <Button Grid.Column="0" Grid.Row="2" Content="Team7" Margin="10" Background="#BED1D0"/>
         <Button Grid.Column="1" Grid.Row="2" Content="Team8"  Margin="10" Background="#BED1D0"/>
-        <TextBox x:Name="TB_InputFilePath" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" ToolTip="Например: C:/temp/Имя_Файла.CSV" Text="Указать путь до файла"/>
+        <TextBox x:Name="TB_InputFilePath" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" ToolTip="Например: C:/temp/Имя_Файла.CSV" Text="Указать путь до файла" TextChanged="TB_InputFilePath_TextChanged"/>
         <Button Grid.Column="4" Grid.Row="2" Content="Иинструкция" ToolTip="Создает и открывают инструкцию по использованию программы" Margin="10" Background="#BED1D0"/>
         <Button Grid.Column="5" Grid.Row="2" Content="FileConverter" ToolTip="Создает в каталоге программы файл FileConverter" Margin="10" Background="#BED1D0"/>
+        <Button Grid.Column="5" Grid.Row="4" Content="Продолжить" ToolTip="Перед тем как продолжить, выберите имя документа и разделитель" Margin="10" Background="Green" Click="Button_Click_Continue"/>
+        <GroupBox Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" Padding="5">
+            <GroupBox.Header>
+                <TextBlock Background="Lavender">Выбрать разделитель</TextBlock>
+            </GroupBox.Header>
+            <StackPanel Background="#FF87AF59">
+                <RadioButton IsChecked="True" Margin="3"  Content=";"></RadioButton>
+                <RadioButton Margin="1" Content=","></RadioButton>
+            </StackPanel>
+        </GroupBox>
     </Grid>
 </Window>

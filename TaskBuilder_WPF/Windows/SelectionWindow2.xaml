@@ -26,13 +26,13 @@
                     <TextBlock DockPanel.Dock="Top">Выберите один или  несколько вариантов:<LineBreak /></TextBlock>
 
                     <CheckBox DockPanel.Dock="Top" >
-                        <TextBlock DockPanel.Dock="Top" Background="BlanchedAlmond" TextWrapping="Wrap" Text="Это очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень длинный текст" />
+                        <TextBlock DockPanel.Dock="Top" Background="BlanchedAlmond" Margin="0 0 0 10" TextWrapping="Wrap" Text="Это очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень длинный текст" />
                     </CheckBox>
                     <CheckBox DockPanel.Dock="Top">
-                        <TextBlock DockPanel.Dock="Top" Background="BlanchedAlmond" TextWrapping="Wrap" Text="Уже не такой уж и большой текст" />
+                        <TextBlock DockPanel.Dock="Top" Background="BlanchedAlmond" Margin="0 0 0 10" TextWrapping="Wrap" Text="Уже не такой уж и большой текст" />
                     </CheckBox>
                     <CheckBox DockPanel.Dock="Top">
-                        <TextBlock DockPanel.Dock="Top" Background="BlanchedAlmond" TextWrapping="Wrap" Text="Совсем поменьше" />
+                        <TextBlock DockPanel.Dock="Top" Background="BlanchedAlmond" Margin="0 0 0 10" TextWrapping="Wrap" Text="Совсем поменьше" />
                     </CheckBox>
                 </DockPanel>
             </Expander>
@@ -41,13 +41,13 @@
                     <TextBlock DockPanel.Dock="Top">Выберите один или  несколько вариантов:<LineBreak /></TextBlock>
 
                     <CheckBox DockPanel.Dock="Top" >
-                        <TextBlock DockPanel.Dock="Top" Background="BlanchedAlmond" TextWrapping="Wrap" Text="Это очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень длинный текст" />
+                        <TextBlock DockPanel.Dock="Top" Background="BlanchedAlmond" Margin="0 0 0 10" TextWrapping="Wrap" Text="Это очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень длинный текст" />
                     </CheckBox>
                     <CheckBox DockPanel.Dock="Top">
-                        <TextBlock DockPanel.Dock="Top" Background="BlanchedAlmond" TextWrapping="Wrap" Text="Уже не такой уж и большой текст" />
+                        <TextBlock DockPanel.Dock="Top" Background="BlanchedAlmond" Margin="0 0 0 10" TextWrapping="Wrap" Text="Уже не такой уж и большой текст" />
                     </CheckBox>
                     <CheckBox DockPanel.Dock="Top">
-                        <TextBlock DockPanel.Dock="Top" Background="BlanchedAlmond" TextWrapping="Wrap" Text="Совсем поменьше" />
+                        <TextBlock DockPanel.Dock="Top" Background="BlanchedAlmond" Margin="0 0 0 10" TextWrapping="Wrap" Text="Совсем поменьше" />
                     </CheckBox>
                 </DockPanel>
             </Expander>
@@ -56,13 +56,13 @@
                     <TextBlock DockPanel.Dock="Top">Выберите один или  несколько вариантов:<LineBreak /></TextBlock>
 
                     <CheckBox DockPanel.Dock="Top" >
-                        <TextBox DockPanel.Dock="Top" Background="BlanchedAlmond" TextWrapping="Wrap" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Text="Это дила очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень длинный текст" />
+                        <TextBox DockPanel.Dock="Top" Background="BlanchedAlmond" TextWrapping="Wrap" Margin="0 0 0 10" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Text="Это дила очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень-очень длинный текст" />
                     </CheckBox>
                     <CheckBox DockPanel.Dock="Top">
-                        <TextBox DockPanel.Dock="Top" Background="BlanchedAlmond" TextWrapping="Wrap" IsReadOnly="True" VerticalScrollBarVisibility="Auto"  Text="Уже не такой уж и большой текст" />
+                        <TextBox DockPanel.Dock="Top" Background="BlanchedAlmond" TextWrapping="Wrap" Margin="0 0 0 10" IsReadOnly="True" VerticalScrollBarVisibility="Auto"  Text="Уже не такой уж и большой текст" />
                     </CheckBox>
                     <CheckBox DockPanel.Dock="Top">
-                        <TextBox DockPanel.Dock="Top" Background="BlanchedAlmond" TextWrapping="Wrap" IsReadOnly="True" VerticalScrollBarVisibility="Auto"  Text="Совсем поменьше" />
+                        <TextBox DockPanel.Dock="Top" Background="BlanchedAlmond" TextWrapping="Wrap" Margin="0 0 0 10" IsReadOnly="True" VerticalScrollBarVisibility="Auto"  Text="Совсем поменьше" />
                     </CheckBox>
                 </DockPanel>
             </Expander>

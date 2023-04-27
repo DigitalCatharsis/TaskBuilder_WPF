@@ -61,6 +61,13 @@ namespace TaskBuilder_WPF
             w_SelectionWindow2.Show();
             Hide();
         }
+
+        private void Button_Click_Start2(object sender, RoutedEventArgs e)
+        {
+            var w_StartWindow2 = new StartWindow2();
+            w_StartWindow2.Show();
+            Hide();
+        }
     }
 
     
