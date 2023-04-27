@@ -6,14 +6,9 @@
         xmlns:local="clr-namespace:TaskBuilder_WPF"
         mc:Ignorable="d"
         Title="TestWindow" Height="450" Width="800">
-    <DockPanel>
-        <TextBlock DockPanel.Dock="Right" FontSize="13"  VerticalAlignment="Bottom" Padding="0,0,0,1" Name="MinAgo"  Text="{Binding Path=MinAgo}" Foreground="Gray" ></TextBlock>
-        <StackPanel Orientation="Horizontal" >
-            <TextBlock Name="UserNameTextBlock"  Margin="0,0,8,0"  VerticalAlignment="Bottom" FontSize="15" Text="{Binding Path=UserName}" FontWeight="Bold"></TextBlock>
-            <TextBlock FontSize="13" VerticalAlignment="Bottom" Padding="0,0,0,1" Foreground="LightGray" >@</TextBlock>
-            <TextBlock FontSize="13" VerticalAlignment="Bottom" Padding="0,0,0,1" Name="ScreenNameTextBlock"  Text="{Binding Path=ScreenName}" Foreground="Gray" ></TextBlock>
-        </StackPanel>
-    </DockPanel>
-
-
+    <StackPanel>
+        <TextBlock Text="{Binding Path=Category}" />
+        <TextBlock Text="{Binding Path=SubCategoryNumber}" />
+        <TextBlock Text="{Binding Path=SubCategoryContent}" />
+    </StackPanel>
 </Window>

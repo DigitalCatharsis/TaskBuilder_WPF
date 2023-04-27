@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TaskBuilder_WPF.Classes;
 
 namespace TaskBuilder_WPF
 {
@@ -20,34 +21,18 @@ namespace TaskBuilder_WPF
     /// </summary>
     public partial class TestWindow : Window
     {
+        public DataInfo MyPhone { get; set; }
         public TestWindow()
         {
             InitializeComponent();
 
-            // Create OpenFileDialog
+            MyPhone = new DataInfo
+            {
+                SubCategoryContent ="123",
+                Category = "Lumia 630",
+                SubCategoryNumber = "1000"
+            };
+            this.DataContext = MyPhone;
         }
-
-        //private void button1_Click(object sender, RoutedEventArgs e)
-        //{
-        //    // Create OpenFileDialog
-        //    Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-
-        //    // Set filter for file extension and default file extension
-        //    dlg.DefaultExt = ".csv";
-        //    dlg.Filter = "Csv Files (.csv)|*.csv";
-        //    //dlg.InitialDirectory = каталог, который отображается при первом вызове окна
-
-        //    // Display OpenFileDialog by calling ShowDialog method
-        //    Nullable<bool> result = dlg.ShowDialog();
-
-        //    // Get the selected file name and display in a TextBox
-        //    if (result == true)
-        //    {
-        //        // Open document
-        //        string filename = dlg.FileName;
-        //        FileNameTextBox.Text = filename;
-        //    }
-        //}
-
     }
 }

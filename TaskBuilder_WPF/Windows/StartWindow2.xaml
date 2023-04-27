@@ -13,15 +13,15 @@
                     <TextBlock Background="Lavender">Выбрать файл</TextBlock>
                 </GroupBox.Header>
                 <DockPanel>
-                    <TextBox DockPanel.Dock="left"  Height="32"  Margin="30,40,0,40" Name="FileNameTextBox" Width="393" />
-                    <Button DockPanel.Dock="Right" Content="Обзор" Height="32" HorizontalAlignment="Left" Padding="5" Name="button1" VerticalAlignment="Center" Width="88" Click="button1_Click" />
+                    <TextBox DockPanel.Dock="left"  Height="32"  Margin="30,40,0,40" x:Name="TBOX_Filepath" Width="393" />
+                    <Button DockPanel.Dock="Right" Content="Обзор" Height="32" HorizontalAlignment="Left" Padding="5" Name="button1" VerticalAlignment="Center" Width="88" Click="Browse_Click" />
                 </DockPanel>
             </GroupBox>
             <GroupBox DockPanel.Dock="top" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <GroupBox.Header>
                     <TextBlock Background="Lavender" >Выбрать разделитель</TextBlock>
                 </GroupBox.Header>
-                <DockPanel HorizontalAlignment="Left"  Background="#FF87AF59" Margin="30,10,1,10">
+                <DockPanel x:Name="DP_DelimeterPanel" HorizontalAlignment="Left"  Background="#FF87AF59" Margin="30,10,1,10">
                     <RadioButton IsChecked="True" FlowDirection="LeftToRight" Content="Точка с Запятой ;" Margin="0 0 10 0"></RadioButton>
                     <RadioButton  FlowDirection="LeftToRight" Content="Запятая ,"></RadioButton>
                 </DockPanel>
