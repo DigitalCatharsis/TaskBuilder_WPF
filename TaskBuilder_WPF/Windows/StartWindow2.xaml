@@ -22,8 +22,8 @@
                     <TextBlock Background="Lavender" >Выбрать разделитель</TextBlock>
                 </GroupBox.Header>
                 <DockPanel x:Name="DP_DelimeterPanel" HorizontalAlignment="Left"  Background="#FF87AF59" Margin="30,10,1,10">
-                    <RadioButton IsChecked="True" FlowDirection="LeftToRight" Content="Точка с Запятой ;" Margin="0 0 10 0"></RadioButton>
-                    <RadioButton  FlowDirection="LeftToRight" Content="Запятая ,"></RadioButton>
+                    <RadioButton FlowDirection="LeftToRight" Content="Точка с Запятой ;" Margin="0 0 10 0"></RadioButton>
+                    <RadioButton IsChecked="True"  FlowDirection="LeftToRight" Content="Запятая ,"></RadioButton>
                 </DockPanel>
             </GroupBox>
             <Button DockPanel.Dock="Bottom" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30" Content="Продолжить" ToolTip="Перед тем как продолжить, выберите имя документа и разделитель" Margin="10" Background="Green" Click="Button_Click_Continue"/>

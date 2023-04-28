@@ -68,5 +68,6 @@
             </Expander>
         </DockPanel>
         <Button Content="Следующий шаг" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="3" Height="37" Width="108"/>
+        <TextBlock x:Name="TestBlock" HorizontalAlignment="Left" Margin="185,7,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="29" Width="103"/>        
     </Grid>
 </Window>

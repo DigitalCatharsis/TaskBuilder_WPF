@@ -57,8 +57,8 @@ namespace TaskBuilder_WPF
 
         private void Button_Click_Selection2(object sender, RoutedEventArgs e)
         {
-            var w_SelectionWindow2 = new SelectionWindow2();
-            w_SelectionWindow2.Show();
+            var w_SelectionWindow3 = new SelectionWindow3();
+            w_SelectionWindow3.Show();
             Hide();
         }
 

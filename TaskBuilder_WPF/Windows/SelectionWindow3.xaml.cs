@@ -19,17 +19,18 @@ namespace TaskBuilder_WPF
     /// </summary>
     /// 
 
-    public partial class SelectionWindow2 : Window
+    public partial class SelectionWindow3 : Window
     {
         public Dictionary<string, Dictionary<string, string>> FileContent { get; init; }
-        public SelectionWindow2(Dictionary<string, Dictionary<string, string>> fileContent)
+        public SelectionWindow3(Dictionary<string, Dictionary<string, string>> fileContent)
         {
             InitializeComponent();
             FileContent = fileContent;
-            TestBlock.Text = (FileContent["Salutation"]["1"]);
+            //TestBlock.Text = (FileContent["Salutation"]["1"]);
+            PreviewGenerator();
         }
 
-        public SelectionWindow2()
+        public SelectionWindow3()
         {
             InitializeComponent();
         }

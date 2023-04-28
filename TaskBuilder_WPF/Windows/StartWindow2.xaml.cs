@@ -39,7 +39,6 @@ namespace TaskBuilder_WPF
             var path = Environment.ProcessPath;
             path = Environment.ProcessPath.Substring(0, path.LastIndexOf('\\'));
             dlg.InitialDirectory = path;
-            //dlg.SelectedPath = path;
 
             // Display OpenFileDialog by calling ShowDialog method
             Nullable<bool> result = dlg.ShowDialog();
@@ -62,20 +61,18 @@ namespace TaskBuilder_WPF
             {
                 fileInfo = new FileInfo(filepath);
             }
-            else {MessageBox.Show("Укажите путь до файла.", "Путь до файла пуст", MessageBoxButton.OK, MessageBoxImage.Warning); return;
+            else
+            {
+                MessageBox.Show("Укажите путь до файла.", "Путь до файла пуст", MessageBoxButton.OK, MessageBoxImage.Warning); return;
             }
-
-
-
 
             if (CheckFileExist(filepath) && !CheckFileLocked(fileInfo))
             {
                 try
                 {
-                    ReadFile(filepath);
-                    var w_SelectionWindow2 = new SelectionWindow2();
-                    w_SelectionWindow2.DataContext = (ReadFile(filepath));
-                    w_SelectionWindow2.Show();
+                    var fileContent = ReadFile(filepath);
+                    var w_SelectionWindow3 = new SelectionWindow3(fileContent);
+                    w_SelectionWindow3.Show();
                     Hide();
                 }
                 catch (Exception ex) { MessageBox.Show("Невозможно считать файл. Скорее всего файл не соответсвует требованиям шаблона, либо разделитель выбран неверно", "Ошибка чтения файла", MessageBoxButton.OK, MessageBoxImage.Error); }
@@ -90,7 +87,7 @@ namespace TaskBuilder_WPF
                 {
                     MessageBox.Show("Файл в данный момент запущен другой программой. Требуется закрыть файл и попробовать еще раз.", "Файл запущен!", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
-                
+
             }
         }
 
