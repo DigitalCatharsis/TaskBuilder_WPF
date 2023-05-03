@@ -122,11 +122,11 @@ namespace TaskBuilder_WPF
             return false;
         }
 
-        private Dictionary<string, Dictionary<string, string>> ReadFile(string filepath)
+        private List<DataInfo> ReadFile(string filepath)
         {
             var dP_DelContent = (DP_DelimeterPanel.Children.OfType<RadioButton>().FirstOrDefault(r => r.IsChecked.HasValue && r.IsChecked.Value)).Content;
             var delimeter = (dP_DelContent.ToString())[^1];
-            var dataReader = new DatabaseReader(delimeter.ToString());
+            var dataReader = new DatabaseReader2(delimeter.ToString());
             var results = dataReader.ReadData(filepath);
             return results;
         }

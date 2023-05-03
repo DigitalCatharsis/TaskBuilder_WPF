@@ -19,7 +19,7 @@ namespace TaskBuilder_WPF
     /// </summary>
     public partial class PreviewWindow : Window
     {
-        public PreviewWindow()
+        public PreviewWindow(StringBuilder result)
         {
             InitializeComponent();
         }

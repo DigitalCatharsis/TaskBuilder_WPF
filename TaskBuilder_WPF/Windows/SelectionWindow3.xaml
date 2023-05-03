@@ -6,10 +6,27 @@
         xmlns:local="clr-namespace:TaskBuilder_WPF"
         mc:Ignorable="d"
         Title="SelectionWindow3" Height="450" Width="800">
-    <Grid ShowGridLines="True">
-        <Expander HorizontalAlignment="Left" Height="100" Header="Expander" Margin="111,120,0,0" VerticalAlignment="Top" Width="100">
-            <Grid Background="#FFE5E5E5"/>
-        </Expander>
 
+    <Grid x:Name="grid" >
+        <ListBox x:Name="ListCollection">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Expander Header="{Binding Path=CategoryName}">
+                        <ListBox ItemsSource="{Binding Path=CategoryContent}"  >
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <DockPanel >
+                                        <CheckBox Name="CheckBoxes" Content="{Binding}" >
+                                        </CheckBox>
+                                    </DockPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Expander>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Далее" Click="Button_Click_Preview"></Button>
+        <TextBlock x:Name="textBlock" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="Далее"></TextBlock>
     </Grid>
 </Window>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TaskBuilder_WPF.Windows;
 
 namespace TaskBuilder_WPF
 {
@@ -37,12 +38,6 @@ namespace TaskBuilder_WPF
             w_StartWindow.Show();
             Hide();
         }
-        private void Button_Click_Preview(object sender, RoutedEventArgs e)
-        {
-            var w_PreviewWindow = new PreviewWindow();
-            w_PreviewWindow.Show();
-            Hide();
-        }
         private void Button_Click_Test(object sender, RoutedEventArgs e)
         {
             var w_TestWindow = new TestWindow();
@@ -55,17 +50,17 @@ namespace TaskBuilder_WPF
             this.Close(); // закрытие окна
         }
 
-        private void Button_Click_Selection2(object sender, RoutedEventArgs e)
-        {
-            var w_SelectionWindow3 = new SelectionWindow3();
-            w_SelectionWindow3.Show();
-            Hide();
-        }
-
         private void Button_Click_Start2(object sender, RoutedEventArgs e)
         {
             var w_StartWindow2 = new StartWindow2();
             w_StartWindow2.Show();
+            Hide();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var window1 = new Window1();
+            window1.Show();
             Hide();
         }
     }

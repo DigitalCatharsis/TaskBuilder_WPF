@@ -6,8 +6,21 @@
         xmlns:local="clr-namespace:TaskBuilder_WPF"
         mc:Ignorable="d"
         Title="TestWindow" Height="450" Width="800">
-    <StackPanel>
-        <TextBox x:Name="myTextBox" Height="30" />
-        <TextBlock x:Name="myTextBlock" Text="{Binding ElementName=myTextBox,Path=Text}" Height="30" />
-    </StackPanel>
+    <Grid>
+        <ListBox x:Name="CategoryCollection">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Expander Header="{Binding Path=CategoryName}">
+                        <StackPanel Margin="5">
+                            <ListBox>
+                                <CheckBox DataContext="List.">
+                                    <TextBlock FontSize="16" Text="{Binding Path=CategoryContent}" HorizontalAlignment="Center" />
+                                </CheckBox>
+                            </ListBox>
+                        </StackPanel>
+                    </Expander>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
 </Window>

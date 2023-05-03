@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,42 +19,24 @@ namespace TaskBuilder_WPF
 {
     /// <summary>
     /// Interaction logic for TestWindow.xaml
-    /// </summary>
-    /// 
-    public class Phone : DependencyObject
-    {
-        public static readonly DependencyProperty TitleProperty;
-        public static readonly DependencyProperty PriceProperty;
+    /// </summary> /// 
 
-        static Phone()
-        {
-            TitleProperty = DependencyProperty.Register("Title", typeof(string), typeof(Phone));
-            PriceProperty = DependencyProperty.Register("Price", typeof(int), typeof(Phone));
-        }
-        public string Title
-        {
-            get { return (string)GetValue(TitleProperty); }
-            set { SetValue(TitleProperty, value); }
-        }
-        public int Price
-        {
-            get { return (int)GetValue(PriceProperty); }
-            set { SetValue(PriceProperty, value); }
-        }
-    }
+
 
     public partial class TestWindow : Window
     {
-        public DataInfo MyPhone { get; set; }
+        public List<string> Categories { get; set; }
+        //public List<string> phones;
         public TestWindow()
         {
             InitializeComponent();
-        }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Phone phone = (Phone)this.Resources["iPhone6s"]; // получаем ресурс по ключу
-            MessageBox.Show(phone.Price.ToString());
+            // phones = new List<string> { "iPhone 6S Plus", "Nexus 6P", "Galaxy S7 Edge" };
+            Categories = new List<string> {"Hello","Task", "Result" };
+            CategoryCollection.ItemsSource = Categories;
+
+
+
         }
     }
 }
