@@ -17,48 +17,67 @@ using TaskBuilder_WPF.Classes;
 
 namespace TaskBuilder_WPF
 {
-    /// <summary>
-    /// Interaction logic for SelectionWindow2.xaml
-    /// </summary>
-    /// 
-
     public partial class SelectionWindow3 : Window
     {
         public List<ExpandersInfo> FileContent { get; init; }
         public SelectionWindow3(List<DataInfo> fileContent)
         {
             InitializeComponent();
-            //var expanderInfoList = FileContentToExpandersInfos(fileContent);
 
-            var tempDataInfo1 = new ExpandersInfo() {CategoryName = "Hello1", CategoryContent = new ObservableCollection<string> { "HelloCont1",  "HelloCont2", "HelloCont3"} };
-            var tempDataInfo2 = new ExpandersInfo() {CategoryName = "Task", CategoryContent = new ObservableCollection<string> { "Task1", "Task2", "Task3" } };
-            var tempDataInfo3 = new ExpandersInfo() {CategoryName = "Result", CategoryContent = new ObservableCollection<string> { "Result1", "Result2", "Result3" } };
-            var tempResult = new ObservableCollection<ExpandersInfo> { tempDataInfo1, tempDataInfo2, tempDataInfo3 };
+            var tempDataInfo3 = new ExpandersInfo()
+            {
+                CategoryName = "Task",
+                CheckBoxContent = new ObservableCollection<CheckBoxData>
+            {
+                new CheckBoxData { Content = "Content1", IsSelected = false },
+
+                new CheckBoxData { Content = "Content2", IsSelected = true, },
+
+                new CheckBoxData { Content = "Content3", IsSelected = false, }
+            }
+            };
+
+            var tempDataInfo4 = new ExpandersInfo()
+            {
+                CategoryName = "Result",
+                CheckBoxContent = new ObservableCollection<CheckBoxData>
+            {
+                new CheckBoxData { Content = "Result1", IsSelected = false },
+
+                new CheckBoxData { Content = "Result2", IsSelected = true, },
+
+                new CheckBoxData { Content = "Result3", IsSelected = false, }
+            }
+            };
+            var tempResult = new ObservableCollection<ExpandersInfo> { tempDataInfo3, tempDataInfo4 };
             ListCollection.ItemsSource = tempResult;
-
-
-
         }
 
-
-
-        private List<ExpandersInfo> FileContentToExpandersInfos(List<DataInfo> fileContent)
-        {
-            var list = new List<ExpandersInfo>();
-            return list;
-        }
+        //private List<ExpandersInfo> FileContentToExpandersInfos(List<DataInfo> fileContent)
+        //{
+        //    var list = new List<ExpandersInfo>();
+        //    return list;
+        //}
 
         private void Button_Click_Preview(object sender, RoutedEventArgs e)
         {
-            var result = new StringBuilder();
-            //var list = (this.Content as Grid).Children.OfType<CheckBox>().Where(x => x.IsChecked == true);
-            // var list = this.grid.Children.OfType<CheckBox>().Where(x => x.IsChecked == true);
-            //var selectedItems = ValueCollection.Items.Cast<CheckBox>().Where(x => x.IsChecked == true).Select(x => x.Content).ToList();
-            //MessageBox.Show(string.Join("\n", selectedItems));
+            //Так как мы не можем выбрать все чекбоксы, потому что они созданы в темлейте, мы обращаемся к свойствам класса CheckBoxData в списке классов ExpandersInfo
+            StringBuilder sb = new StringBuilder();
 
-            //var w_PreviewWindow = new PreviewWindow(result);
-            //w_PreviewWindow.Show();
-            //Hide();
+            foreach (var ExpInfo in (ObservableCollection<ExpandersInfo>)ListCollection.ItemsSource)
+            {
+                foreach (var checkboxData in ExpInfo.CheckBoxContent)
+                {
+                    //Берем только выбранные значения чекбоксов
+                    if (checkboxData.IsSelected == true)
+                    {
+                        sb.AppendLine(checkboxData.Content);
+                    }
+                }
+            }
+            var w_PreviewWindow = new PreviewWindow(sb);
+            w_PreviewWindow.Show();
+            Hide();
         }
 
 

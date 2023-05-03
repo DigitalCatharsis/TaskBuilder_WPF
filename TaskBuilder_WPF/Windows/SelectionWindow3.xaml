@@ -12,11 +12,11 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Expander Header="{Binding Path=CategoryName}">
-                        <ListBox ItemsSource="{Binding Path=CategoryContent}"  >
+                        <ListBox ItemsSource="{Binding Path=CheckBoxContent}"  >
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
-                                    <DockPanel >
-                                        <CheckBox Name="CheckBoxes" Content="{Binding}" >
+                                    <DockPanel>
+                                        <CheckBox Content="{Binding Path=Content}" IsChecked="{Binding IsSelected, Mode=TwoWay}" >
                                         </CheckBox>
                                     </DockPanel>
                                 </DataTemplate>

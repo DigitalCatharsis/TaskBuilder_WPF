@@ -22,6 +22,14 @@ namespace TaskBuilder_WPF
         public PreviewWindow(StringBuilder result)
         {
             InitializeComponent();
+            textBlock.Text = result.ToString();
+        }
+
+        private void Button_Click_Start2(object sender, RoutedEventArgs e)
+        {
+            var w_StartWindow2 = new StartWindow2();
+            w_StartWindow2.Show();
+            Hide();
         }
     }
 }

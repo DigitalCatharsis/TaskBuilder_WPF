@@ -7,10 +7,12 @@
         mc:Ignorable="d"
         Title="PreviewWindow" Height="450" Width="800">
     <Grid>
-        <Canvas Grid.Row="0" Background="LightGreen" Margin="0,0,0,67">
-            <TextBlock>У меня тут куча описания и возможность скроллить</TextBlock>
-        </Canvas>
-        <Button Content="Accept" HorizontalAlignment="Left" Margin="178,400,0,0" VerticalAlignment="Top"/>
-        <Button Content="Restart" HorizontalAlignment="Left" Margin="530,400,0,0" VerticalAlignment="Top"/>
+        <ScrollViewer  >
+            <Canvas Grid.Row="0" Background="LightGreen" Margin="0,0,0,67">
+                <TextBlock x:Name="textBlock"></TextBlock>
+            </Canvas>
+        </ScrollViewer>
+        <Button Content="Accept" HorizontalAlignment="Left" Margin="177,0,0,25" VerticalAlignment="Bottom"/>
+        <Button Content="Restart" HorizontalAlignment="Left" Margin="532,0,0,25" VerticalAlignment="Bottom" Click="Button_Click_Start2"/>
     </Grid>
 </Window>

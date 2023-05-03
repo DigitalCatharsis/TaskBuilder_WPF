@@ -10,6 +10,6 @@ namespace TaskBuilder_WPF.Classes
     public class ExpandersInfo
     {
         public string CategoryName { get; set; }
-        public ObservableCollection<string> CategoryContent { get; set; }
+        public ObservableCollection<CheckBoxData> CheckBoxContent { get; set; }
     }
 }
