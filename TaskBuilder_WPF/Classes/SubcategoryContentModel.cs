@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace TaskBuilder_WPF.Classes
 {
-    public class CheckBoxData //:INotifyPropertyChanged
+    public class SubcategoryContentModel //:INotifyPropertyChanged
     {
         private bool _checked;
         public string Content { get; set; }

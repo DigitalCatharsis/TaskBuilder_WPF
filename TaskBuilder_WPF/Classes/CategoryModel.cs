@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace TaskBuilder_WPF.Classes
 {
-    public class ExpandersInfo
+    public class CategoryModel
     {
+        //expandersInfo
         public string CategoryName { get; set; }
-        public ObservableCollection<CheckBoxData> CheckBoxContent { get; set; }
+        public ObservableCollection<SubcategoryContentModel> CheckBoxContent { get; set; }
     }
 }

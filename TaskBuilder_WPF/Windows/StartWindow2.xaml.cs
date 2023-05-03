@@ -33,8 +33,8 @@ namespace TaskBuilder_WPF
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
 
             // Set filter for file extension and default file extension
-            dlg.DefaultExt = ".csv";
-            dlg.Filter = "Csv Files (.csv)|*.csv";
+            dlg.DefaultExt = ".xlsx";
+            dlg.Filter = "Excel Files (.xlsx)|*.xlsx";
 
             var path = Environment.ProcessPath;
             path = Environment.ProcessPath.Substring(0, path.LastIndexOf('\\'));
@@ -68,14 +68,15 @@ namespace TaskBuilder_WPF
 
             if (CheckFileExist(filepath) && !CheckFileLocked(fileInfo))
             {
-                try
-                {
+                //try
+                //{
                     var fileContent = ReadFile(filepath);
                     var w_SelectionWindow3 = new SelectionWindow3(fileContent);
                     w_SelectionWindow3.Show();
                     Hide();
-                }
-                catch (Exception ex) { MessageBox.Show("Невозможно считать файл. Скорее всего файл не соответсвует требованиям шаблона, либо разделитель выбран неверно", "Ошибка чтения файла", MessageBoxButton.OK, MessageBoxImage.Error); }
+                //}
+                //catch (Exception ex) { MessageBox.Show("Невозможно считать файл. Скорее всего файл не соответсвует требованиям шаблона, либо разделитель выбран неверно", "Ошибка чтения файла", MessageBoxButton.OK, MessageBoxImage.Error); }
+
             }
             else
             {
@@ -122,12 +123,10 @@ namespace TaskBuilder_WPF
             return false;
         }
 
-        private List<DataInfo> ReadFile(string filepath)
+        private List<CategoryModel> ReadFile(string filepath)
         {
-            var dP_DelContent = (DP_DelimeterPanel.Children.OfType<RadioButton>().FirstOrDefault(r => r.IsChecked.HasValue && r.IsChecked.Value)).Content;
-            var delimeter = (dP_DelContent.ToString())[^1];
-            var dataReader = new DatabaseReader2(delimeter.ToString());
-            var results = dataReader.ReadData(filepath);
+            var dataReader = new DatabaseReader3();
+            var results = dataReader.ReadToListOf_CategoryModel(filepath);
             return results;
         }
 
