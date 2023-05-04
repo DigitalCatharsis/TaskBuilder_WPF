@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TaskBuilder_WPF.Windows;
 
 namespace TaskBuilder_WPF
 {
@@ -26,24 +25,7 @@ namespace TaskBuilder_WPF
             InitializeComponent();
         }
 
-        private void Button_Click_Selection(object sender, RoutedEventArgs e)
-        {
-            var w_SelectionWindow = new SelectionWindow();
-            w_SelectionWindow.Show();
-            Hide();
-        }
-        private void Button_Click_Start(object sender, RoutedEventArgs e)
-        {
-            var w_StartWindow = new StartWindow();
-            w_StartWindow.Show();
-            Hide();
-        }
-        private void Button_Click_Test(object sender, RoutedEventArgs e)
-        {
-            var w_TestWindow = new TestWindow();
-            w_TestWindow.Show();
-            Hide();
-        }
+
 
         private void Button_Click_EscButton(object sender, RoutedEventArgs e)
         {
@@ -52,19 +34,9 @@ namespace TaskBuilder_WPF
 
         private void Button_Click_Start2(object sender, RoutedEventArgs e)
         {
-            var w_StartWindow2 = new StartWindow2();
+            var w_StartWindow2 = new StartWindow();
             w_StartWindow2.Show();
             Hide();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var window1 = new Window1();
-            window1.Show();
-            Hide();
-        }
     }
-
-    
-
 }

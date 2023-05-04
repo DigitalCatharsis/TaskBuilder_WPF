@@ -68,15 +68,23 @@ namespace TaskBuilder_WPF.Classes
 
             var categoriesList = ReadCategories(path);
 
+            int i = 0;
             foreach (var (category, subcategories) in categoriesList)
             {
+                ;
                 //Console.WriteLine(category);
+                categoryModel.Add(new CategoryModel()
+                {
+                    CategoryName = category,
+                    CheckBoxContent = new ObservableCollection<SubcategoryContentModel> {}
+                });
 
                 foreach (var sub in subcategories)
                 {
-                    //Console.WriteLine($"\t{sub}");
-                    categoryModel.Add(new CategoryModel() { CategoryName = category, CheckBoxContent = new ObservableCollection<SubcategoryContentModel> { new SubcategoryContentModel { Content = sub, IsSelected = false } } });
+                    //Console.WriteLine($"\t{sub}");                    
+                    categoryModel[i].CheckBoxContent.Add(new SubcategoryContentModel{ Content=$"{sub}\r", IsSelected=false});
                 }
+                i++;
             }
             return categoryModel;
         }

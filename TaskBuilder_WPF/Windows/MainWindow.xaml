@@ -7,11 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Width="60" Height="30" Panel.ZIndex="3" Margin="10 10 0 0" Click="Button_Click_Selection">Selection</Button>
-        <Button Width="60" Height="30" Panel.ZIndex="1" Margin="75 75 0 0" Click="Button_Click_Start" IsDefault="True">Start</Button>        
-        <Button Width="60" Height="30" Panel.ZIndex="1" Margin="480,240,260,164" Click="Button_Click_Start2" IsDefault="True">Start2</Button>        
-        <Button Width="60" Height="30" Panel.ZIndex="0" Margin="125 125 0 0" Click="Button_Click_Test">Test</Button>
+        <Button Width="60" Height="30" Panel.ZIndex="1" Margin="480,240,260,164" Click="Button_Click_Start2" IsDefault="True">Start2</Button>
         <Button x:Name="escButton" Width="60" Height="30" Panel.ZIndex="0" Margin="693,47,47,357" Content="Выход" IsCancel="True" Click="Button_Click_EscButton"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="589,77,0,0" VerticalAlignment="Top" Height="75" Width="85" Click="Button_Click"/>
     </Grid>
 </Window>

@@ -11,7 +11,6 @@ namespace TaskBuilder_WPF.Classes
 {
     public class SubcategoryContentModel //:INotifyPropertyChanged
     {
-        private bool _checked;
         public string Content { get; set; }
         public bool IsSelected { get; set; }
     }

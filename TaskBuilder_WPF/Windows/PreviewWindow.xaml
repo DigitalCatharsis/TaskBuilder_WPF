@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaskBuilder_WPF"
         mc:Ignorable="d"
-        Title="PreviewWindow" Height="450" Width="800">
+        Title="PreviewWindow" Height="768" Width="1024">
     <Grid>
-        <ScrollViewer  >
-            <Canvas Grid.Row="0" Background="LightGreen" Margin="0,0,0,67">
-                <TextBlock x:Name="textBlock"></TextBlock>
-            </Canvas>
+        <ScrollViewer>
+                <TextBlock x:Name="textBlock" TextWrapping="WrapWithOverflow"></TextBlock>
         </ScrollViewer>
-        <Button Content="Accept" HorizontalAlignment="Left" Margin="177,0,0,25" VerticalAlignment="Bottom"/>
-        <Button Content="Restart" HorizontalAlignment="Left" Margin="532,0,0,25" VerticalAlignment="Bottom" Click="Button_Click_Start2"/>
+        <DockPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10">
+            <Button Content="Принять" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" Width="100" Height="30" Click="Button_Click_OpenFile"/>
+            <Button Content="Рестарт" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Width="100" Height="30" Click="Button_Click_Start2"/>
+        </DockPanel>
     </Grid>
 </Window>
