@@ -14,12 +14,8 @@
                 <GradientStop Color="#9151F9" Offset="0.5" />
             </LinearGradientBrush>
         </Grid.Background>
-        <ScrollViewer CanContentScroll="False" >
-            <StackPanel>
-                
- 
+        <ScrollViewer CanContentScroll="False" PreviewMouseWheel="ListViewScrollViewer_PreviewMouseWheel">
             <ListBox x:Name="ListCollection">
-
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Expander Header="{Binding Path=CategoryName}">
@@ -37,7 +33,6 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
         </ListBox>
-            </StackPanel>
         </ScrollViewer>
         <Button VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Далее" Width="100" Height="30" Margin="10" Click="Button_Click_Preview"></Button>
     </Grid>
