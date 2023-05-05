@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
@@ -14,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TaskBuilder_WPF.Classes;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TaskBuilder_WPF
 {
@@ -57,7 +59,7 @@ namespace TaskBuilder_WPF
             var filepath = TBOX_Filepath.Text;
             FileInfo fileInfo;
 
-            if (filepath != String.Empty)
+            if (filepath != string.Empty)
             {
                 fileInfo = new FileInfo(filepath);
             }
@@ -130,9 +132,23 @@ namespace TaskBuilder_WPF
             return results;
         }
 
-        public record DelimeterInfo(string Text, char Delimeter)
+        private void Button_Click_Manual(object sender, RoutedEventArgs e)
         {
-            public override string ToString() => Text;
+            try
+            {
+                var path = ($"{GetExeLocation()}\\TaskBuilderManual.doc");
+                //open file
+                Process.Start(new ProcessStartInfo(path) { UseShellExecute = true });
+            }
+            catch (Exception ex) { MessageBox.Show("Не удалось найти файл с инструкцией 'TaskBuilderManual.doc' в корневой папке программы.", "Ошибка открытия файла", MessageBoxButton.OK, MessageBoxImage.Error); }
+
+        }
+
+        static string GetExeLocation()
+        {
+            var path = Environment.ProcessPath;
+            path = Environment.ProcessPath.Substring(0, path.LastIndexOf('\\'));
+            return path;
         }
 
     }

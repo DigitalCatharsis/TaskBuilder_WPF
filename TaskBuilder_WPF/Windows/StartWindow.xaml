@@ -20,7 +20,7 @@
                     <Button DockPanel.Dock="Right" Content="Обзор" Height="32" HorizontalAlignment="Left" Name="button1" VerticalAlignment="Center" MinWidth="88" Click="Browse_Click"/>
                 </DockPanel>
                 <Button DockPanel.Dock="Bottom" HorizontalAlignment="Center" VerticalAlignment="Bottom" MinWidth="100" MinHeight="30" Content="Продолжить" ToolTip="Перед тем как продолжить, выберите имя документа и разделитель" Margin="10" Click="Button_Click_Continue"/>
-                <Button DockPanel.Dock="top" VerticalAlignment="Bottom" HorizontalAlignment="right" MinWidth="100" MinHeight="30" Margin="1 10 10 0" Content="Инструкция" ToolTip="Создает и открывают инструкцию по использованию программы" Style="{StaticResource MaterialDesignFlatButton}" />
+                <Button DockPanel.Dock="top" VerticalAlignment="Bottom" HorizontalAlignment="right" MinWidth="100" MinHeight="30" Margin="1 10 10 0" Content="Инструкция" ToolTip="Создает и открывают инструкцию по использованию программы" Style="{StaticResource MaterialDesignFlatButton}"  Click="Button_Click_Manual"/>
             </DockPanel>
         </Border>
         <TextBlock HorizontalAlignment="Left" Margin="15,286,0,0" TextWrapping="Wrap" Text="EsterEgg" VerticalAlignment="Top" Opacity="0" ToolTip="Made by Alexander Marchenko" Height="17" Width="32"/>
