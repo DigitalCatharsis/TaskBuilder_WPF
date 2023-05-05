@@ -24,5 +24,6 @@
             </DockPanel>
         </Border>
         <TextBlock HorizontalAlignment="Left" Margin="15,286,0,0" TextWrapping="Wrap" Text="EsterEgg" VerticalAlignment="Top" Opacity="0" ToolTip="Made by Alexander Marchenko" Height="17" Width="32"/>
+        
     </Grid>
 </Window>

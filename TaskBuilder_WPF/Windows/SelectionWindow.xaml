@@ -5,27 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaskBuilder_WPF"
         mc:Ignorable="d"
-        Title="SelectionWindow" Height="768" Width="1024">
+        Title="SelectionWindow" Height="900" Width="1600">
 
     <Grid x:Name="grid" >
-        <ListBox x:Name="ListCollection">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Expander Header="{Binding Path=CategoryName}">
-                        <ListBox ItemsSource="{Binding Path=CheckBoxContent}"  >
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <DockPanel>
-                                        <CheckBox Content="{Binding Path=Content}" IsChecked="{Binding IsSelected, Mode=TwoWay}" >
-                                        </CheckBox>
-                                    </DockPanel>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
-                    </Expander>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
+                <GradientStop Color="#DCD4E9" Offset="1" />
+                <GradientStop Color="#9151F9" Offset="0.5" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <ScrollViewer CanContentScroll="False" >
+            <StackPanel>
+                
+ 
+            <ListBox x:Name="ListCollection">
+
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Expander Header="{Binding Path=CategoryName}">
+                            <ListBox ItemsSource="{Binding Path=CheckBoxContent}"  >
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <DockPanel>
+                                            <CheckBox Content="{Binding Path=Content}" IsChecked="{Binding IsSelected, Mode=TwoWay}" Background="red" >
+                                            </CheckBox>
+                                        </DockPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Expander>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
         </ListBox>
+            </StackPanel>
+        </ScrollViewer>
         <Button VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Далее" Width="100" Height="30" Margin="10" Click="Button_Click_Preview"></Button>
     </Grid>
 </Window>

@@ -68,14 +68,14 @@ namespace TaskBuilder_WPF
 
             if (CheckFileExist(filepath) && !CheckFileLocked(fileInfo))
             {
-                //try
-                //{
+                try
+                {
                     var fileContent = ReadFile(filepath);
                     var w_SelectionWindow3 = new SelectionWindow(fileContent);
                     w_SelectionWindow3.Show();
                     Hide();
-                //}
-                //catch (Exception ex) { MessageBox.Show("Невозможно считать файл. Скорее всего файл не соответсвует требованиям шаблона, либо разделитель выбран неверно", "Ошибка чтения файла", MessageBoxButton.OK, MessageBoxImage.Error); }
+                }
+                catch (Exception ex) { MessageBox.Show("Невозможно считать файл. Скорее всего файл не соответсвует требованиям шаблона.", "Ошибка чтения файла", MessageBoxButton.OK, MessageBoxImage.Error); }
 
             }
             else

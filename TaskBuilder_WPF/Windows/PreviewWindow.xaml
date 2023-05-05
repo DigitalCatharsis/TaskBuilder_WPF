@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:TaskBuilder_WPF"
         mc:Ignorable="d"
         Title="PreviewWindow" Height="768" Width="1024">
-    <Grid>
+    <Grid >
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                <GradientStop Color="#CDC2DC" Offset="1" />
+                <GradientStop Color="#F4F1F8" Offset="0.5" />
+            </LinearGradientBrush>
+        </Grid.Background>
         <ScrollViewer>
                 <TextBlock x:Name="textBlock" TextWrapping="WrapWithOverflow"></TextBlock>
         </ScrollViewer>
